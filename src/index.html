@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>TaskFlow Pro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>TaskFlow</h1>
+        
+        <form id="task-form">
+            <input type="text" id="task-input" placeholder="Nueva tarea..." required autocomplete="off">
+            <button type="submit">Agregar</button>
+        </form>
+
+        <!-- NUEVO: Filtros y Contador -->
+        <div class="controls-bar">
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">Todas</button>
+                <button class="filter-btn" data-filter="pending">Pendientes</button>
+                <button class="filter-btn" data-filter="completed">Completadas</button>
+            </div>
+            <span id="task-counter">0 pendientes</span>
+        </div>
+
+        <ul id="task-list"></ul>
+    </div>
+
+    <template id="task-template">
+        <li class="task-item">
+            <input type="checkbox" class="task-checkbox">
+            <span class="task-title" title="Doble clic para editar"></span>
+            <button class="delete-btn">&times;</button>
+        </li>
+    </template>
+
+    <script src="renderer.js"></script>
+</body>
+</html>

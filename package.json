@@ -1,0 +1,13 @@
+{
+  "name": "taskflow-app",
+  "version": "1.0.0",
+  "description": "Task manager with Electron and PostgreSQL",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {
+    "electron": "^28.0.0",
+    "pg": "^8.11.3"
+  }
+}
